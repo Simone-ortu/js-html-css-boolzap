@@ -16,38 +16,113 @@
 }
 
 
+
+
+
+/* main rules */
+.avatar img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 /* left */
 .container-left{
     float: left;
     width: 25%;
     height: 90%;
-    background-color: lightgreen;
     margin-top: 30px;
     margin-left: 10%;
 }
+
+/* left > header-left */
 .header-left{
-    background-color: lightblue;
+    background-color:#EAEAEA;
     width:100%;
-    height: 10%;
+    height: 70px;
     border-right: 1px solid gray;
+    display: flex;
+    
 }
+.header-left .avatar img{
+    margin: 10px;
+    display: inline-block;
+    justify-content: left;
+}
+.header-left p{
+    width: calc(100% - 165px) ;
+    justify-content: left;
+    line-height: 70px;
+    font-weight: 300;
+}
+.header-left .icons{
+    line-height: 70px;
+    text-align: right;
+    justify-content: right;
+    padding-right: 15px;
+}
+.header-left .icons i{
+    padding-left: 5px;
+    font-size: 20px;
+    color: #B1B1B1;
+}
+
+/* left > disclaimer */
+
 .disclaimer{
     width:100%;
-    height: 12%;
-    background-color: lightslategray;
+    height: 80px;
+    background-color: #8EDAFC;  
+    display: flex;
+    justify-content: left;
 }
+.disclaimer .disc-box{
+    text-align: left;
+    display: inline;
+    padding-top: 20px;
+}
+.disclaimer .disc-box a{
+    color: grey;
+}
+.disclaimer .icon{
+    display: inline;
+    background-color: white;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 15px;
+}
+.disclaimer .icon i{
+    font-size: 20px;
+    vertical-align: middle;
+    color: #8EDAFC; 
+}
+
+    
+    
+    
+   
+
+
+
+
+
+
+
+
 .searchbar{
     width:100%;
-    height: 5%;
+    height: 10px;
     background-color: lightseagreen;
 }
 .contacts{
     width:100%;
-    height: 73%;
+    height: calc(100% - 70px - 90px);
     background-color: lightcyan;
     overflow: hidden;
 }
-
 
 
 
@@ -62,16 +137,16 @@
 .header-right{
     background-color: lightblue;
     width:100%;
-    height: 10%;
+    height: 70px;
 }
 .chat-box{
     width: 100%;
-    height: 80%;
+    height: calc(100% - 70px - 70px);
     background-color: blanchedalmond;
     background-image: url(../img/mine.jpg);
 }
 .chat{
     background-color: lightblue;
     width:100%;
-    height: 10%;
+    height: 70px;
 }
