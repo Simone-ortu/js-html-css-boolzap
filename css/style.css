@@ -64,9 +64,14 @@
     width:100%;
     height: 10%;
 }
-.message-box{
+.chat-box{
     width: 100%;
     height: 80%;
-    background-image: url("img/mine.jpg");
-    background-repeat: no-repeat; 
+    background-color: blanchedalmond;
+    background-image: url(../img/mine.jpg);
+}
+.chat{
+    background-color: lightblue;
+    width:100%;
+    height: 10%;
 }
