@@ -57,7 +57,7 @@ body{
     width: calc(100% - 165px) ;
     justify-content: left;
     line-height: 70px;
-    font-weight: 300;
+    font-weight: 600;
 }
 .header-left .icons{
     line-height: 70px;
@@ -183,11 +183,27 @@ body{
     background-color: lightsalmon;
     margin-top: 30px;
 }
+
+
+/* header right */
 .header-right{
     background-color: lightblue;
     width:100%;
     height: 70px;
+    
 }
+.header-right .user{
+    display: flex;
+    flex-direction: row;
+}
+.header-right .icons{
+    float: right;
+}
+
+
+
+
+
 .chat-box{
     width: 100%;
     height: calc(100% - 70px - 70px);
