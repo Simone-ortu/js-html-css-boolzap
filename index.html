@@ -11,6 +11,7 @@
         crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                 <button type="submit"><i class="fas fa-search"></i></button>
                 <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
             </div>
-            <div class="contacts ">
+            <div id="contacts ">
                 <ul>
                     <li>
                         <div class="avatar_c">
@@ -88,7 +89,14 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <div class="chat-box"></div>
+            <div class="chat-box">
+                <div class="message sent">
+                    Ciao come stai?
+                </div>
+                <div class="message recived">
+                    Bene bene tu?
+                </div>
+            </div>
             <div class="chat">
                 <div class="smile"><i class="far fa-smile"></i></div>
                 <input type="text" placeholder="Scrivi un mesaggio">
@@ -96,6 +104,7 @@
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
