@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container clearfix">
+    <div id="app" class="container clearfix">
         <div class="container-left">
             <div class="header-left">
                 <div class="avatar">
@@ -44,7 +44,7 @@
             </div>
             <div class="contacts">
                 <ul id="contatti">
-                    <li v-for="item in items">
+                    <li @click="changeChat(index)" v-for="(item , index) in items">
                         <div class="avatar_c">
                             <img v-bind:src="'img/avatar'+item.avatar+'.jpg'" alt="avatar">
                             <div class="nome">{{item.name}}</div>
@@ -56,12 +56,12 @@
         <div class="container-right">
             <div class="header-right">
                 <div class="user">
-                    <div v-for="contact in contacts" class="avatar">
-                        <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" alt="avatar_1">
+                    <div class="avatar">
+                        <img v-bind:src="'img/avatar'+items[selectedChat].avatar+'.jpg'" alt="avatar_1">
                         
                     </div>
                     <div class="accesso">
-                        <h4>{{contact.name}}</h4>
+                        <h4>{{items[selectedChat].name}}</h4>
                         <p>ultimo accesso oggi alle</p>
                     </div>
 
@@ -73,8 +73,8 @@
                 </div>
             </div>
             <div class="chat-box">
-                <div class="message" :class="messaggio.status" v-for= "(messaggio , index)in chats[counter].messages">
-                   <span> {{element.text}}</span> 
+                <div class="message" :class="messaggio.status" v-for= "(messaggio , index) in items[selectedChat].messages">
+                  {{messaggio.text}}
                 </div>
 
             </div>

@@ -1,6 +1,7 @@
 var contacts= new Vue({
-    el: '#contatti',
+    el: '#app',
      data:{
+         selectedChat : 0,
          items:[
             {
                 name: 'Michele',
@@ -86,10 +87,14 @@ var contacts= new Vue({
                 ],
             },
         ] 
-     }
-    
-})
+    },
+    methods: {
+        changeChat(index){
+            this.selectedChat = index
+        }
+    }
 
+})
 
 
 
