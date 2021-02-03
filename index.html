@@ -56,11 +56,12 @@
         <div class="container-right">
             <div class="header-right">
                 <div class="user">
-                    <div class="avatar">
-                        <img src="img\avatar_1.jpg" alt="avatar_1">
+                    <div v-for="contact in contacts" class="avatar">
+                        <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" alt="avatar_1">
+                        
                     </div>
                     <div class="accesso">
-                        <h4>Mario</h4>
+                        <h4>{{contact.name}}</h4>
                         <p>ultimo accesso oggi alle</p>
                     </div>
 
@@ -72,12 +73,10 @@
                 </div>
             </div>
             <div class="chat-box">
-                <div class="message sent">
-                    Ciao come stai?
+                <div class="message" :class="messaggio.status" v-for= "(messaggio , index)in chats[counter].messages">
+                   <span> {{element.text}}</span> 
                 </div>
-                <div class="message recived">
-                    Bene bene tu?
-                </div>
+
             </div>
             <div class="chat">
                 <div class="smile"><i class="far fa-smile"></i></div>

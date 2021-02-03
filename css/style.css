@@ -147,6 +147,7 @@ body{
     background-color: white;
     overflow-y: scroll;
     overflow-x: none;
+    position: relative;
 }
 .avatar_c img{
     width: 60px;
@@ -160,9 +161,13 @@ body{
     height: 80px;
     border-bottom: 1px solid #F6F6F6;
 }
+.contacts ul li:hover{
+    background-color: #979797;
+}
 .contacts .nome{
+    position: absolute;
     display: inline;
-    line-height: 40px;
+    /* line-height: 40px; */
     margin-top: 10px;
     font-weight: 600;
 }

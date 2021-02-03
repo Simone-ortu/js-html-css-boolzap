@@ -87,8 +87,8 @@ var contacts= new Vue({
             },
         ] 
      }
+    
 })
-
 
 
 
