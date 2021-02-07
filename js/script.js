@@ -1,8 +1,8 @@
-var contacts= new Vue({
+var contacts = new Vue({
     el: '#app',
-     data:{
-         selectedChat : 0,
-         items:[
+    data: {
+        selectedChat: 0,
+        items: [
             {
                 name: 'Michele',
                 avatar: '_1',
@@ -86,13 +86,31 @@ var contacts= new Vue({
                     }
                 ],
             },
-        ] 
+        ]
     },
     methods: {
-        changeChat(index){
+        changeChat(index) {
             this.selectedChat = index
         }
-    }
+    },
+    eventMessage() {
+        if(this.addMessage.length > 0){
+            let= newMessage = {
+                date: '',
+                text: this.addMessage,
+                status: 'sent'
+            };
+            this.items[this.selectedChat].messages.push(newMessage);
+            this.addMessage = '';
+
+        }
+        // setTimeout(this.autoAnswer,1000);
+
+
+
+    },
+    
+
 
 })
 

@@ -271,6 +271,9 @@ body{
     border-radius: 10px;
     font-size: 15px;
 }
+.date{
+    font-size: 12px;
+}
 .sent{
      float: right;
      clear: both;

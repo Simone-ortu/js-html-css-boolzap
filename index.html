@@ -75,12 +75,13 @@
             <div class="chat-box">
                 <div class="message" :class="messaggio.status" v-for= "(messaggio , index) in items[selectedChat].messages">
                   {{messaggio.text}}
+                  <div class="date">{{messaggio.date}}</div>
                 </div>
 
             </div>
             <div class="chat">
                 <div class="smile"><i class="far fa-smile"></i></div>
-                <input type="text" placeholder="Scrivi un mesaggio">
+                <input type="text" @keyup.enter="eventMessage" v-model="addMessage" placeholder="Scrivi un mesaggio">
                 <div class="audio"><i class="fas fa-microphone"></i></div>
             </div>
         </div>
