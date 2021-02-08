@@ -43,11 +43,11 @@
             </div>
             <div class="searchbar clearfix">
                 <button type="submit"><i class="fas fa-search"></i></button>
-                <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                <input type="text" @keyup='searchContact' v-model='searchContacText' placeholder="Cerca o inizia una nuova chat" name="search">
             </div>
             <div class="contacts">
                 <ul id="contatti">
-                    <li @click="changeChat(index)" v-for="(item , index) in items">
+                    <li @click="changeChat(index)" v-if='item.visible' v-for="(item , index) in items">
                         <div class="avatar_c">
                             <img v-bind:src="'img/avatar'+item.avatar+'.jpg'" alt="avatar">
                             <div class="nome">{{item.name}}</div>

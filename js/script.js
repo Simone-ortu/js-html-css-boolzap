@@ -3,6 +3,7 @@ var contacts = new Vue({
     data: {
         addMessage: '',
         selectedChat: 0,
+        searchContacText: '',
         items: [
             {
                 name: 'Michele',
@@ -115,6 +116,16 @@ var contacts = new Vue({
             }
             this.items[this.selectedChat].messages.push(answer);
 
+        },
+        searchContact() {
+            this.items.forEach(element => {
+                if (element.name.toLowerCase().includes(this.searchContacText.toLowerCase())) {
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
+
+            });
         }
 
     }
