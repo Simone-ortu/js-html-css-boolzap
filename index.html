@@ -10,6 +10,9 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
@@ -58,7 +61,7 @@
                 <div class="user">
                     <div class="avatar">
                         <img v-bind:src="'img/avatar'+items[selectedChat].avatar+'.jpg'" alt="avatar_1">
-                        
+
                     </div>
                     <div class="accesso">
                         <h4>{{items[selectedChat].name}}</h4>
@@ -73,9 +76,10 @@
                 </div>
             </div>
             <div class="chat-box">
-                <div class="message" :class="messaggio.status" v-for= "(messaggio , index) in items[selectedChat].messages">
-                  {{messaggio.text}}
-                  <div class="date">{{messaggio.date}}</div>
+                <div class="message" :class="messaggio.status"
+                    v-for="(messaggio , index) in items[selectedChat].messages">
+                    {{messaggio.text}}
+                    <div class="date">{{messaggio.date}}</div>
                 </div>
 
             </div>

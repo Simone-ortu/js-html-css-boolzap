@@ -96,7 +96,7 @@ var contacts = new Vue({
         eventMessage() {
             if (this.addMessage.length > 0) {
                 let newMessage = {
-                    date: '',
+                    date: moment().format('YYYY MM DD, h:mm:ss a'),
                     text: this.addMessage,
                     status: 'sent'
                 };
@@ -104,9 +104,19 @@ var contacts = new Vue({
                 this.addMessage = '';
 
             }
-            // setTimeout(this.autoAnswer,1000);
+            setTimeout(this.autoAnswer, 1000);
         },
-        
+        autoAnswer() {
+
+            let answer = {
+                date: moment().format('YYYY MM DD, h:mm:ss a'),
+                text: 'ok',
+                status: 'received'
+            }
+            this.items[this.selectedChat].messages.push(answer);
+
+        }
+
     }
 
 
@@ -117,6 +127,8 @@ var contacts = new Vue({
 })
 
 
+// var moment = require('moment');
+// moment().format();
 
 
 
